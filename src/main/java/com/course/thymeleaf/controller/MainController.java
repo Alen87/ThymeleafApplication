@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 @Controller
 public class MainController {
 
@@ -16,17 +18,22 @@ public class MainController {
     }
     @GetMapping("/elvis")
     public String elvisExample(Model model){
+        /*
+         *Elvis operator ?:
+         * If unless
+         * Switch case
+         */
         model.addAttribute("isAdmin",false);
         model.addAttribute("gender","M");
         return "elvis";
     }
 
-
-    /*
-    *Elvis operator ?:
-    * If unless
-    * Switch case
-     */
+    @GetMapping("/each")
+    public String eachExample(Model model){
+        List<String> stringList = List.of("First","Second","Third");
+        model.addAttribute("list",stringList);
+        return "each";
+    }
 
 
 }

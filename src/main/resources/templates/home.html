@@ -16,5 +16,27 @@
     <p th:text="'Value of a*b : ' +${a}*${b}"></p>
 </div>
 <button id="click-button" onclick="main()">Click here</button>
+<footer id="parent-footer" th:replace="fragment/demoHtml :: header">
+    <h1>From Home</h1>
+</footer>
+
+<!--INCLUDE
+<footer id="parent-footer">
+    <h1 id="from-fragments">From Fragments</h1>
+
+</footer>-->
+
+
+<!--INSERT
+<footer id="parent-footer"><nav id="from-fragment1">
+    <h1 id="from-fragments">From Fragments</h1>
+</nav></footer>-->
+
+<!--REPLACE
+<nav id="from-fragment1">
+    <h1 id="from-fragments">From Fragments</h1>
+</nav>-->
+
+
 </body>
 </html>
